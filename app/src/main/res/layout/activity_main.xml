@@ -8,14 +8,30 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <!-- CAPÇALERA -->
+    <TextView
+        android:id="@+id/capcelera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="B &amp; O BMI CALCULATOR"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- HOME -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_home"
         android:layout_width="0dp"
         android:layout_height="180dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toStartOf="@id/seleccio_dona"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/capcelera">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,18 +49,21 @@
                 android:layout_height="wrap_content"
                 android:text="Home"
                 android:textSize="24sp" />
+
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- DONA -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_dona"
         android:layout_width="0dp"
         android:layout_height="180dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/seleccio_home"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/capcelera">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,18 +81,19 @@
                 android:layout_height="wrap_content"
                 android:text="Dona"
                 android:textSize="24sp" />
-        </LinearLayout>
 
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- ALÇADA -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_alsada"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seleccio_dona">
+        app:layout_constraintTop_toBottomOf="@id/seleccio_dona">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
                 android:text="Alçada"
-                android:textSize="24sp"></TextView>
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -95,17 +115,17 @@
                 android:text="160"
                 android:textSize="24sp" />
 
-
             <com.google.android.material.slider.Slider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:thumbHeight="30dp"
                 app:thumbWidth="30dp" />
-        </LinearLayout>
 
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- PES -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_pes"
         android:layout_width="0dp"
@@ -137,9 +157,9 @@
 
         </LinearLayout>
 
-
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- EDAT -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_edat"
         android:layout_width="0dp"
@@ -172,6 +192,5 @@
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
