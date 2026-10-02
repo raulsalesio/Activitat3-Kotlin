@@ -150,6 +150,28 @@
         app:layout_constraintStart_toEndOf="@id/seleccio_pes"
         app:layout_constraintTop_toBottomOf="@id/seleccio_alsada">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edat"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
