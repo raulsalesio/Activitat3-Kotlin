@@ -52,9 +52,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home"
-                android:textColor="@color/white"
-                android:textSize="24sp"/>
+                android:text="MALE"
+                android:textColor="#8D8E98"
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -87,9 +87,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dona"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:text="FEMALE"
+                android:textColor="#8D8E98"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -115,15 +115,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
-                android:text="Alçada"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:text="HEIGHT"
+                android:textColor="#8D8E98"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
-                android:text="160"
+                android:text="160 centimetres"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
@@ -158,9 +159,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pes"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:text="WEIGHT"
+                android:textColor="#8D8E98"
+                android:textSize="18sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -219,9 +220,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edat"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:text="AGE"
+                android:textColor="#8D8E98"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
