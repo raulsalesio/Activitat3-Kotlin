@@ -47,14 +47,14 @@
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:src="@drawable/baseline_male_24"
-                android:tint="@color/white"/>
+                android:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MALE"
                 android:textColor="#8D8E98"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -82,7 +82,7 @@
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:src="@drawable/baseline_female_24"
-                android:tint="@color/white"/>
+                android:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -114,11 +114,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_weight="0.1"
                 android:text="HEIGHT"
                 android:textColor="#8D8E98"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -131,6 +131,7 @@
             <com.google.android.material.slider.Slider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
                 app:thumbHeight="30dp"
                 app:thumbWidth="30dp" />
 
@@ -161,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:text="WEIGHT"
                 android:textColor="#8D8E98"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -183,7 +184,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="Disminuir pes"
                     android:src="@drawable/outline_check_indeterminate_small_24"
-                    android:tint="@color/white"/>
+                    android:tint="@color/white" />
 
                 <ImageButton
                     android:layout_width="60dp"
@@ -191,7 +192,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="Augmentar pes"
                     android:src="@drawable/outline_add_24"
-                    android:tint="@color/white"/>
+                    android:tint="@color/white" />
 
             </LinearLayout>
 
@@ -244,7 +245,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="Disminuir edat"
                     android:src="@drawable/outline_check_indeterminate_small_24"
-                    android:tint="@color/white"/>
+                    android:tint="@color/white" />
 
                 <ImageButton
                     android:layout_width="60dp"
@@ -252,7 +253,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="Augmentar edat"
                     android:src="@drawable/outline_add_24"
-                    android:tint="@color/white"/>
+                    android:tint="@color/white" />
 
             </LinearLayout>
 
@@ -260,4 +261,7 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width=""
+        android:layout_height=""
 </androidx.constraintlayout.widget.ConstraintLayout>
