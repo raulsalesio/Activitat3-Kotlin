@@ -9,7 +9,7 @@
     android:padding="16dp"
     tools:context=".MainActivity2">
 
-
+    <!-- CAPÇALERA -->
     <TextView
         android:id="@+id/capcelera_resultat"
         android:layout_width="wrap_content"
@@ -22,9 +22,83 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        >
+    <!-- YOUR RESULTS -->
+    <TextView
+        android:id="@+id/tv_title_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Your Results"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/capcelera_resultat" />
+
+    <!-- RESULTS -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_results"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#1D1E33"
+        app:layout_constraintBottom_toTopOf="@id/btn_recalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_results">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_result_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NORMAL"
+                android:textColor="#008000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_result_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop=""
+                android:text="22.43"
+                android:textColor="@color/white"
+                android:textSize="64sp"
+                android:textStyle="bold"
+
+                >
+
+            </TextView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 
-    </TextView>
+    <!-- RE-CALCULATE -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_recalculate"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="RE-CALCULATE"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#800080"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

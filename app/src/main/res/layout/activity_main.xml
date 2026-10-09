@@ -133,9 +133,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
+                android:value="160"
                 android:valueFrom="100"
                 android:valueTo="220"
-                android:value="160"
                 app:thumbHeight="30dp"
                 app:thumbWidth="30dp" />
 
@@ -271,7 +271,7 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- BOTÓ CALCULATE -->
+    <!-- CALCULATE -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_calculate"
         android:layout_width="0dp"
