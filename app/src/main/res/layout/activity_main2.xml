@@ -24,6 +24,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- BACK -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:src="@drawable/outline_arrow_back_ios_new_24"
+        android:tint="@color/white">
+
+    </ImageView>
+
     <!-- YOUR RESULTS -->
     <TextView
         android:id="@+id/tv_title_results"
@@ -60,12 +71,11 @@
                 android:id="@+id/tv_result_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
                 android:text="NORMAL"
                 android:textColor="#008000"
                 android:textSize="24sp"
-                android:textStyle="bold"
-
-                >
+                android:textStyle="bold">
 
             </TextView>
 
@@ -73,13 +83,10 @@
                 android:id="@+id/tv_result_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop=""
                 android:text="22.43"
                 android:textColor="@color/white"
                 android:textSize="64sp"
-                android:textStyle="bold"
-
-                >
+                android:textStyle="bold">
 
             </TextView>
         </LinearLayout>
