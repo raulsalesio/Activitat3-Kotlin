@@ -1,21 +1,45 @@
 package com.example.activitat03
 
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.slider.Slider
 
 class MainActivity : AppCompatActivity() {
 
-    var home_selected: Boolean = false
-    lateinit var card_home: MaterialCardView
-    lateinit var card_dona: MaterialCardView
 
+    // DECLARACIÓ DE VARIABLES
+    private var isMaleSelected: Boolean = true
+    private var currentWeight: Int = 70
+    private var currentAge: Int = 18
+    private var currentHeight: Int = 170
+
+    // Targetes de Gènere
+    private lateinit var cardMale: MaterialCardView
+    private lateinit var cardFemale: MaterialCardView
+
+    // Alçada
+    private lateinit var tvHeight: TextView
+    private lateinit var sliderHeight: Slider
+
+    // Pes
+    private lateinit var tvWeight: TextView
+    private lateinit var btnSubWeight: ImageButton
+    private lateinit var btnAddWeight: ImageButton
+
+    // Edat
+    private lateinit var tvAge: TextView
+    private lateinit var btnSubAge: ImageButton
+    private lateinit var btnAddAge: ImageButton
+
+    // Botó de calcular
+    private lateinit var btnCalculate: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,22 +50,5 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-
-        card_home = findViewById<MaterialCardView>(R.id.seleccio_home)
-        card_dona = findViewById<MaterialCardView>(R.id.seleccio_dona)
-
-        card_home.setOnClickListener {
-            card_home.setCardBackgroundColor(Color.RED)
-            card_dona.setCardBackgroundColor(Color.WHITE)
-            home_selected = true
-        }
-
-
-        card_dona.setOnClickListener {
-            card_dona.setCardBackgroundColor(Color.RED)
-            card_home.setCardBackgroundColor(Color.WHITE)
-            home_selected = false
-        }
     }
-
 }
