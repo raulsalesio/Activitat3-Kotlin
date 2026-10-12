@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.slider.Slider
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -100,6 +102,7 @@ class MainActivity : AppCompatActivity() {
         setAge()
     }
 
+
     private fun initListeners() {
         // Selecció de gènere
         cardMale.setOnClickListener {
@@ -142,8 +145,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateBMI() {
-        val heightMeters = currentHeight / 100
-        val bmi = currentWeight / (heightMeters * heightMeters)
+        val heightMeters = currentHeight / 100.0
+        val bmi = currentWeight.toDouble() / (heightMeters * heightMeters)
 
         // Intent per obrir MainActivity2 y pasarli el resultat
         val intent = Intent(this, MainActivity2::class.java)

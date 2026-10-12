@@ -29,6 +29,12 @@ class MainActivity2 : AppCompatActivity() {
             insets
         }
         initComponent()
+        initListeners()
+
+        val bmiResult: Double = intent.extras?.getDouble("EXTRA_BMI_RESULT") ?: -1.0
+        if (bmiResult != -1.0) {
+            setBMI(bmiResult)
+        }
     }
 
     private fun initComponent() {
@@ -38,6 +44,11 @@ class MainActivity2 : AppCompatActivity() {
         btnBack = findViewById(R.id.back_button)
     }
 
+    private fun initListeners() {
+        btnRecalculate.setOnClickListener { finish() }
+        btnBack.setOnClickListener { finish() }
+
+    }
     private fun setBMI(result: Double) {
         tv_result.text = String.format("%.2f", result)
 
