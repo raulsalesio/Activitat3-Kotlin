@@ -1,5 +1,7 @@
 package com.example.activitat03
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -49,6 +51,105 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        initComponent()
+        initListeners()
+        initUI()
 
     }
+
+    // Funcions Main
+    private fun initComponent() {
+        cardMale = findViewById(R.id.seleccio_home)
+        cardFemale = findViewById(R.id.seleccio_dona)
+        tvHeight = findViewById(R.id.tv_height)
+        sliderHeight = findViewById(R.id.slider_height)
+        tvWeight = findViewById(R.id.tv_weight)
+        btnSubWeight = findViewById(R.id.btn_sub_weight)
+        btnAddWeight = findViewById(R.id.btn_add_weight)
+        tvAge = findViewById(R.id.tv_age)
+        btnSubAge = findViewById(R.id.btn_sub_age)
+        btnAddAge = findViewById(R.id.btn_add_age)
+        btnCalculate = findViewById(R.id.btn_calculate)
+    }
+
+    private fun setWeight() {
+        tvWeight.text = currentWeight.toString()
+    }
+
+    private fun setAge() {
+        tvAge.text = currentAge.toString()
+    }
+
+    private fun changeGender(isMale: Boolean) {
+        isMaleSelected = isMale
+        val colorSelected = Color.parseColor("#1D1E33")
+        val colorUnselected = Color.parseColor("#111328")
+
+        if (isMaleSelected) {
+            cardMale.setCardBackgroundColor(colorSelected)
+            cardFemale.setCardBackgroundColor(colorUnselected)
+        } else {
+            cardMale.setCardBackgroundColor(colorUnselected)
+            cardFemale.setCardBackgroundColor(colorSelected)
+        }
+    }
+
+    private fun initUI() {
+        changeGender(true)
+        setWeight()
+        setAge()
+    }
+
+    private fun initListeners() {
+        // Selecció de gènere
+        cardMale.setOnClickListener {
+            changeGender(isMale = true)
+        }
+        cardFemale.setOnClickListener {
+            changeGender(isMale = false)
+        }
+
+        // Slider d'alçada
+        sliderHeight.addOnChangeListener { _, value, _ ->
+            currentHeight = value.toInt()
+            tvHeight.text = "$currentHeight centimeters"
+        }
+
+        // Botons de Pes
+        btnSubWeight.setOnClickListener {
+            currentWeight -= 1
+            setWeight()
+        }
+        btnAddWeight.setOnClickListener {
+            currentWeight += 1
+            setWeight()
+        }
+
+        // Botons d'Edat
+        btnSubAge.setOnClickListener {
+            currentAge -= 1
+            setAge()
+        }
+        btnAddAge.setOnClickListener {
+            currentAge += 1
+            setAge()
+        }
+
+        // Botón Calcular
+        btnCalculate.setOnClickListener {
+            calculateBMI()
+        }
+    }
+
+    private fun calculateBMI() {
+        val heightMeters = currentHeight / 100
+        val bmi = currentWeight / (heightMeters * heightMeters)
+
+        // Intent per obrir MainActivity2 y pasarli el resultat
+        val intent = Intent(this, MainActivity2::class.java)
+        intent.putExtra("EXTRA_BMI_RESULT", bmi)
+        startActivity(intent)
+    }
 }
+
+

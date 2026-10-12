@@ -121,6 +121,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
@@ -257,7 +258,7 @@
                     app:tint="@color/white" />
 
                 <ImageButton
-                    android:id="@+id/add_sub_age"
+                    android:id="@+id/btn_add_age"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@android:color/transparent"
